@@ -1,4 +1,4 @@
-import { Button, Input, Select } from "antd";
+import { Button, Select } from "antd";
 import React from "react";
 import styles from "./Sidebar.module.css";
 
@@ -88,6 +88,14 @@ class Sidebar extends React.Component {
         <Button onClick={() => this.props.onFilterChange(this.state)}>
           Apply Filter
         </Button>
+        Created By{" "}
+        <a
+          href="https://github.com/GrayHat12"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          GrayHat
+        </a>
       </>
     );
   }
