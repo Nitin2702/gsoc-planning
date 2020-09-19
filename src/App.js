@@ -19,8 +19,8 @@ class App extends React.Component {
   getAllCategories = () => {
     let categories = [];
     for (let i = 0; i < orgdata.data.length; i++) {
-      if (!categories.includes(orgdata.data[i].category)) {
-        categories.push(orgdata.data[i].category);
+      if (!categories.includes(orgdata.data[i].category.toLowerCase().trim())) {
+        categories.push(orgdata.data[i].category.toLowerCase().trim());
       }
     }
     return categories;
@@ -28,8 +28,8 @@ class App extends React.Component {
   getAllLicense = () => {
     let license = [];
     for (let i = 0; i < orgdata.data.length; i++) {
-      if (!license.includes(orgdata.data[i].primary_open_source_license)) {
-        license.push(orgdata.data[i].primary_open_source_license);
+      if (!license.includes(orgdata.data[i].primary_open_source_license.toLowerCase().trim())) {
+        license.push(orgdata.data[i].primary_open_source_license.toLowerCase().trim());
       }
     }
     return license;
@@ -39,8 +39,8 @@ class App extends React.Component {
     for (let i = 0; i < orgdata.data.length; i++) {
       let tags = orgdata.data[i].topic_tags;
       for (let j = 0; j < tags.length; j++) {
-        if (!topictags.includes(tags[j])) {
-          topictags.push(tags[j]);
+        if (!topictags.includes(tags[j].toLowerCase().trim())) {
+          topictags.push(tags[j].toLowerCase().trim());
         }
       }
     }
@@ -51,9 +51,8 @@ class App extends React.Component {
     for (let i = 0; i < orgdata.data.length; i++) {
       let tags = orgdata.data[i].technology_tags;
       for (let j = 0; j < tags.length; j++) {
-        //if (tags[j].includes("java")) console.log(tags);
-        if (!techtags.includes(tags[j])) {
-          techtags.push(tags[j]);
+        if (!techtags.includes(tags[j].toLowerCase().trim())) {
+          techtags.push(tags[j].toLowerCase().trim());
         }
       }
     }
@@ -64,8 +63,8 @@ class App extends React.Component {
     for (let i = 0; i < orgdata.data.length; i++) {
       let tags = orgdata.data[i].proposal_tags;
       for (let j = 0; j < tags.length; j++) {
-        if (!proposaltags.includes(tags[j])) {
-          proposaltags.push(tags[j]);
+        if (!proposaltags.includes(tags[j].toLowerCase().trim())) {
+          proposaltags.push(tags[j].toLowerCase().trim());
         }
       }
     }
