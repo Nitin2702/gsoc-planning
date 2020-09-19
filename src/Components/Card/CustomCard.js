@@ -23,6 +23,10 @@ class CustomCard extends React.Component {
             src={this.props.data.image_url}
           />
           <p className={styles.tagline}>{this.props.data.tagline}</p>
+          <p>
+            TECHNOLOGIES :{" "}
+            <h4>{this.props.data.technology_tags.join(",")}</h4>
+          </p>
         </Card>
       </Popover>
     );
